@@ -33,3 +33,13 @@ body{
 .radio {
 	content: '★ ';
 }
+
+.grid-container{
+	display: grid; 
+	grid-template-columns: auto auto auto;
+}
+
+.grid-item{
+	padding: 10px;
+	text-align: center;
+}
