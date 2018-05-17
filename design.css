@@ -1,20 +1,25 @@
 .rating {
-    float: center;
+	float: center;
+	
+	
 }
 
+
 .rating:not(:checked) > input {
-    display: none;
+	display: none;
+	
 
 }
 
 .rating:not(:checked) > label {
+	
     float:right;
     width:1em;
     padding:0.1em;
     overflow:hidden;
     white-space:nowrap;
     cursor:pointer;
-
+	font-family: cursive;
     line-height:1.0;
     color:#ddd;
     text-shadow:1px 1px #bbb, 2px 2px #666, .1em .1em .2em rgba(0,0,0,.5);
@@ -50,15 +55,22 @@
     left:2px;
 }
 
-
+h1, h2, h3, label {
+    font-family: cursive;
+   } 
+ 
+p {
+    font-family: cursive;
+	}
 .row {
   display: grid;
   grid-template-columns: 700px 200px 200px 200px;
   background-color: white;
   color: black;
+  font-family: cursive;
 }
-button {
-
+button{ 
+	font-family: cursive;
     background-color: #555555;
     border: none;
     color: white;
@@ -66,7 +78,7 @@ button {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .box {
@@ -74,11 +86,9 @@ button {
   color: black;
   border-radius: 5px;
   padding: 20px;
-  font-size: 100%;
+  font-size: 14px;
+  font-family: cursive;
 }
-
-
-
 .wrapper {
   margin-left: 130px;
   display: grid;
@@ -86,6 +96,7 @@ button {
   grid-gap: 20px;
   background-color: #fff;
   color: #444;
+  font-family: cursive;
 }
 
 .img {
@@ -93,5 +104,5 @@ button {
   color: #fff;
   border-radius: 5px;
   padding: 20px;
-  font-size: 100%;
+  font-size: 14px;
 }

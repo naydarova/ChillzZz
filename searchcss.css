@@ -1,7 +1,10 @@
-@import url(http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+#img: hover
+{
+	cursor: pointer;
+}
 .center-div
 {
-text-align: center;
+	text-align: center;
     width: 600px;
     line-height: 0.9;
     margin: 0px auto;
@@ -31,43 +34,76 @@ width:150px;
 fieldset, label { margin: 0; padding: 0; }
 body{ margin: 20px; }
 h1 { font-size: 1.5em; margin: 10px; }
+fieldset{
+	border: none;
+	 
+}
+.row {
+  display: grid;
+  grid-template-columns: 1100px 200px;
 
-/****** Style Star Rating Widget *****/
+  background-color: white;
+  color: black;
+}
+#user{
+	padding-bottom: 40px; 
+    padding-top: 30px;
+}
+.rating {
+	float: left;
+	
+}
+.rating:not(:checked) > input {
+	display: none;
+	padding-bottom: 10px;
+	float: left;
 
-.rating { 
-  border: none;
-  float: left;
 }
 
-.rating > input { display: none; } 
-.rating > label:before { 
-  margin: 5px;
-  font-size: 1.25em;
-  font-family: FontAwesome;
-  display: inline-block;
-  content: "\f005";
+.rating:not(:checked) > label {
+	
+    float:right;
+    width:1em;
+    padding:0.1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+
+    line-height:1.0;
+    color:#ddd;
+    text-shadow:1px 1px #bbb, 2px 2px #666, .1em .1em .2em rgba(0,0,0,.5);
 }
 
-.rating > .half:before { 
-  content: "\f089";
-  position: absolute;
+.rating:not(:checked) > label:before {
+    content: '★ ';
 }
 
-.rating > label { 
-  color: #ddd; 
- float: right; 
+.rating > input:checked ~ label {
+    color: #f70;
+    text-shadow:1px 1px #c60, 2px 2px #940, .1em .1em .2em rgba(0,0,0,.5);
 }
 
-/***** CSS Magic to Highlight Stars on Hover *****/
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+    color: gold;
+    text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);
+}
 
-.rating > input:checked ~ label, 
-.rating:not(:checked) > label:hover, /* hover current star */
-.rating:not(:checked) > label:hover ~ label { color: red;  } /* hover previous stars in list */
-
-.rating > input:checked + label:hover, /* hover current star when changing rating */
+.rating > input:checked + label:hover,
+.rating > input:checked + label:hover ~ label,
 .rating > input:checked ~ label:hover,
-.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
-.rating > input:checked ~ label:hover ~ label { color: red;  } 
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label {
+    color: #ea0;
+    text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating > label:active {
+    position:relative;
+    top:2px;
+    left:2px;
+}
+
 .center{
 text-align: center;
     width: 600px;
@@ -84,7 +120,17 @@ text-align: center;
 
 font-family: cursive;
 }
-
+button{ 
+	font-family: cursive;
+    background-color: #555555;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+}
 .left
 {
  text-align:left;
